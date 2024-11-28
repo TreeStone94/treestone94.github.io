@@ -6,6 +6,16 @@ mermaid: true
 categories: [Blogging,rabbitmq]
 ---
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    mermaid.initialize({
+      themeVariables: {
+        edgeLabelBackground: '#000000'
+      },
+    });
+  });
+  </script>
+
 ### Classic
 
 **기본 큐 타입**으로 RabbitMQ 초기부터 제공된 전통적인 방식
@@ -19,10 +29,9 @@ categories: [Blogging,rabbitmq]
 
 Classic 방식은 다른 노드에 복제할 때 비동기로 복제하고 있기 때문에 메세지 손실이 발생 가능성이 높습니다
 
+
+
 ```mermaid
-%%{init: {'themeVariables': {
-    'edgeLabelBackground': '#000000' %% 화살표 텍스트 배경: 검은색
-}}}%%
 sequenceDiagram
     participant P as Producer
     participant M as Master Node
@@ -67,9 +76,6 @@ sequenceDiagram
 Quorum 방식은 과반수 노드에 동시에 저장하고 있기 때문에 메세지 손실 가능성이 적습니다.
 
 ```mermaid
-%%{init: {'themeVariables': {
-    'edgeLabelBackground': '#000000' %% 화살표 텍스트 배경: 검은색
-}}}%%
 sequenceDiagram
     participant P as Producer
     participant L as Leader Node
