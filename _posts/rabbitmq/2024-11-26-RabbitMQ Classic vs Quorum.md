@@ -20,6 +20,9 @@ categories: [Blogging,rabbitmq]
 Classic 방식은 다른 노드에 복제할 때 비동기로 복제하고 있기 때문에 메세지 손실이 발생 가능성이 높습니다
 
 ```mermaid
+%%{init: {'themeVariables': {
+    'edgeLabelBackground': '#000000' %% 화살표 텍스트 배경: 검은색
+}}}%%
 sequenceDiagram
     participant P as Producer
     participant M as Master Node
@@ -42,7 +45,7 @@ sequenceDiagram
         Note over S1: 일부 메시지만 복제된 상태
     end
     
-    rect rgb(220, 220, 250)
+    rect rgb(161, 190, 247)
         Note over M: 마스터 노드 복구
         Note over S1,S2: 메시지 동기화 시도
         Note over M: 일부 메시지 유실 가능성
@@ -64,6 +67,9 @@ sequenceDiagram
 Quorum 방식은 과반수 노드에 동시에 저장하고 있기 때문에 메세지 손실 가능성이 적습니다.
 
 ```mermaid
+%%{init: {'themeVariables': {
+    'edgeLabelBackground': '#000000' %% 화살표 텍스트 배경: 검은색
+}}}%%
 sequenceDiagram
     participant P as Producer
     participant L as Leader Node
@@ -86,7 +92,7 @@ sequenceDiagram
         Note over F1: 새로운 Leader로 선출
     end
     
-    rect rgb(220, 220, 250)
+    rect rgb(161, 190, 247)
         Note over F1,F2: WAL에서 복구
         F1->>F2: 상태 동기화
         Note over F1,F2: 운영 계속
