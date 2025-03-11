@@ -1,5 +1,5 @@
 ---
-title: "알림 속도 개선(1)"
+title: "알림 속도 개선"
 description: "이 글에서는 기존 API 방식으로 알림을 발송할 때 발생한 성능 문제를 해결하기 위해, 발송 기능을 RabbitMQ로 전환한 이유에 대해 설명합니다."
 date: 2025-03-11 +09:00:00
 permalink: /posts/2025-03-11-architecture/
@@ -21,7 +21,6 @@ categories: [Blogging,architecture]
 - 기존 발송 아키텍쳐
 
 ![notification-Page-1.drawio (5).png](/assets/img/architecture/2025-03-11-architecture-03.png)
-
 ### 해결책: 발송 기능의 RabbitMQ 전환
 
 성능 문제를 해결하기 위해 **발송 기능**을 RabbitMQ로 전환했습니다. RabbitMQ는 **메시지 큐 시스템**을 활용해 발송 요청을 **비동기 방식**으로 처리하며, 대량의 요청도 안정적으로 분산 처리할 수 있습니다. 또한, **RabbitMQ 모니터링 시스템**을 구축하여 발송 상태를 지속적으로 관리하고 장애를 신속히 대응할 수 있도록 했습니다.
