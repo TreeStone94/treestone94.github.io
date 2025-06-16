@@ -1,7 +1,7 @@
 ---
 title: "알림 속도 개선"
 description: "이 글에서는 기존 API 방식으로 알림을 발송할 때 발생한 성능 문제를 해결하기 위해, 발송 기능을 RabbitMQ로 전환한 이유에 대해 설명합니다."
-date: 2025-03-11 +09:00:00
+date: 2025-03-11 +00:00:00
 permalink: /posts/2025-03-11-architecture/
 mermaid: true
 categories: [Blogging,architecture]
