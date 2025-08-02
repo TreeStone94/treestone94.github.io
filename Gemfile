@@ -4,6 +4,7 @@ source "https://rubygems.org"
 
 gemspec
 
+gem "jekyll-sitemap"
 gem "jekyll-feed"
 
 gem "html-proofer", "~> 5.0", group: :test
