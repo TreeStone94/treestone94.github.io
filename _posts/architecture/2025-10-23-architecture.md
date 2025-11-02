@@ -129,6 +129,7 @@ Saga는 주로 두 가지 방식으로 구현됩니다: 코레오그래피(Chore
 
     오케스트레이터가 단일 장애점이 될 수 있습니다. 만약 오케스트레이터가 다운되면 관련된 모든 트랜잭션이 중단됩니다. 또한, 참여하는 서비스들이 오케스트레이터의 API나 명령 형식에 종속되어 코레오그래피 방식에 비해 결합도가 높아집니다.
 
+    [예제 소스](https://github.com/TreeStone94/spring-minilab/tree/main/saga-orchestration-transaction)
 
 ### 장애 분석
 
