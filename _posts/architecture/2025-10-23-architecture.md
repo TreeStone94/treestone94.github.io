@@ -1,6 +1,6 @@
 ---
 title: "분산 트랜잭션 패턴"
-description: "실무에서 서비스에서 분산 트랜잭션을 사용해야할 때 분산 트랜잭션의 종류와 개념에 대해 설명합니다. "
+description: "실무에서 서비스에서 분산 트랜잭션을 사용해야할 때 분산 트랜잭션의 종류와 개념에 대해 설명합니다."
 date: 2025-10-23 +00:00:00
 permalink: /posts/2025-10-23-architecture/
 mermaid: true
